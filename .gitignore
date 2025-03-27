@@ -1,0 +1,5 @@
+*.pyc
+config-priv.yml
+poetry.lock
+
+server_configs/*
