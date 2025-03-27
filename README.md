@@ -29,7 +29,7 @@ This project is created with:
 - [anyascii](https://anyascii.com/): 0.3.2
 
 # Pre-Hosted Instance
-Invite my bot to your server: [https://discord.com/api/oauth2/authorize?client_id=1352571344805691485&permissions=2048&scope=bot%20applications.commands]
+Invite my bot to your server [here](https://discord.com/api/oauth2/authorize?client_id=1352571344805691485&permissions=2048&scope=bot%20applications.commands)
 
 Note that my bot is subject to rate limits, may go down, and may be removed at any time. For a more reliable experience, consider self-hosting the bot.
 
