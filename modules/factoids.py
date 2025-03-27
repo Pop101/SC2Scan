@@ -142,7 +142,7 @@ class LongStreak(Factoid):
         if self.streak <= 1:
             return 0
         
-        return 5 * 1.6 ** self.streak + 20 * int(self.won)
+        return min(135, 5 * 1.4 ** self.streak * (1 + 0.5 * self.won))
     
     def __str__(self) -> str:
         # 2 cases: won vs lost
