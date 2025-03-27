@@ -48,7 +48,7 @@ After setting up these channels, the bot will:
 1. Scan the designated scan channel for BattleNet accounts mentioned in messages
 2. Track StarCraft 2 statistics for the identified accounts
 3. Post weekly recaps in the designated weekly announcements channel
-4. 
+
 # Self-Hosting
 
 
@@ -84,7 +84,7 @@ Hours Between Scans: 24    # Time between automatic channel scans
 Run the bot using Poetry:
 
 ```sh
-poetry run python ./sc2recap.py
+poetry run python ./bot.py
 ```
 
 ## Contributing
