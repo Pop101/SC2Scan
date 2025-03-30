@@ -86,7 +86,7 @@ def parse_player_matches(player, matches, cutoff_date:datetime.datetime = dateti
     lowest_elo           = 0
     highest_after_lowest = None
     
-    max_league      = 0
+    max_league      = None
     league_switches = 0
     
     # We need to reverse-calculate this to get the elo for every match
@@ -143,7 +143,9 @@ def parse_player_matches(player, matches, cutoff_date:datetime.datetime = dateti
                 current_elo += my_team["participant"]["ratingChange"]
         
         # Event 0: Promote?
-        if curr_division > max_league:
+        if max_league == None:
+            max_league = curr_division
+        elif curr_division > max_league:
             league_switches += 1
             max_league = curr_division
             
