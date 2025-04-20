@@ -162,7 +162,7 @@ class EloHigh(Factoid):
         return self.elo / 500 # 5000 elo (grandmaster) = 100 score
     
     def __str__(self) -> str:
-        return "Peaked at {self.elo} elo"
+        return f"Peaked at {self.elo} elo"
 
 @dataclass
 class EloClimb(Factoid):
@@ -178,7 +178,7 @@ class EloClimb(Factoid):
         # Convert elo difference to probability change
         # Using the Elo formula: 1 / (1 + 10^(-elo_diff/400))
         chance_before = 1 / (1 + 10 ** (-elo_diff/400))
-        chance_diff = abs(chance_before - 0.5) * 100
+        chance_diff = abs(chance_before - 0.5)
             
         # Scale to 0-100 range, noting that 400 elo = 100% chance
         return chance_diff * 300
