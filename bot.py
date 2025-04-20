@@ -70,8 +70,8 @@ class BotClient(discord.Client):
     
     async def setup_hook(self):
         # Start background tasks
-        self.find_accounts.start()
         self.post_weekly.start()
+        self.find_accounts.start()
         
         # Register slash commands with Discord
         await self.tree.sync()
@@ -177,8 +177,8 @@ class BotClient(discord.Client):
                     print("\n")
             
             print('Player stats:')
-            for fact in sorted(player_stats):
-                print("\t", fact, fact.impressive())
+            for fact in sorted(player_stats, key=lambda fact: fact.impressive(), reverse=True):
+                print("\t", fact.player_name, fact, fact.impressive())
                 
             # Remove low-interest facts & sort
             player_stats = [fact for fact in player_stats if fact.impressive() > 5]
